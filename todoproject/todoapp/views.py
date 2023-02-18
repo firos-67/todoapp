@@ -145,28 +145,3 @@ def notfinish(request, pk):
 def logout(request):
     auth.logout(request)
     return redirect('home')
-# def index(request):
-#     tasks=Task.objects.all()
-#     if request.method=='POST':
-#         name=request.POST.get('name','')   # request.POST.get() will assign '<value>' (second argument) to the field if no value passed
-#         priority=request.POST.get('priority','')  #request.POST.get() only sets values for char or textchar
-#         date=request.POST.get('date')
-#         task=Task(name=name,priority=priority,date=date)
-#         task.save()
-#
-#     return render(request,'index.html',{'tasks':tasks})
-
-# def delete(request,task_id):
-#     if request.method=='POST':
-#         task=Task.objects.get(id=task_id)
-#         task.delete()
-#         return redirect('/')
-#     return render(request,'delete.html')
-#
-# def update(request,id):
-#     task=Task.objects.get(id=id)
-#     form=TodoForm(request.POST or None, instance=task)
-#     if form.is_valid():
-#         form.save()
-#         return redirect('/')
-#     return render(request,'update.html',{'form':form,'task':task})
