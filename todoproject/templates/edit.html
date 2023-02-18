@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row" style="display:flex; justify-content:center;">
+        <div class="col-lg-6 col-sm-6">
+
+        <div class="card mt-3 shadow">
+            <form method="post">
+    {% csrf_token %}
+    <div class="form-group p-3">
+    {{form.as_p}}
+    <button class="btn btn-primary" type="submit">Update</button>
+    <a href="{% url 'cbvdelete' tasks.id %}" class="btn btn-danger" >Delete</a>
+    </div>
+</form>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

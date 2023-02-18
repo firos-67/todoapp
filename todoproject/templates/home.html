@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<section class="feature">
+		<div class="feature-content">
+			<h1>ToDo App</h1>
+			<p>ToDo App is a web app for maintain your day-to-day tasks or list everything that you have to do. It is helpful in planning our daily schedules..</p>
+			<a class="btn btn-primary cta" href="{% url 'index' %}">Get Started</a>
+		</div>
+		<img src="{% static 'media/home.png' %}" alt="" class="feature-image">
+	</section>
+{% endblock %}
